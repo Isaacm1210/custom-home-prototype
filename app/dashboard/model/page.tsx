@@ -1,9 +1,7 @@
 export default function Page(){
     return(
         <div>
-            <p>
-                On the Model Page
-            </p>
+            <h2>Select Your Model</h2>
         </div>
     )
 }
