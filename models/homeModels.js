@@ -1,56 +1,72 @@
+import model1 from "@/public/homemodels/model1.png"
+import model2 from "@/public/homemodels/model2.png"
+import model3 from "@/public/homemodels/model3.png"
+import model4 from "@/public/homemodels/model4.png"
+import model5 from "@/public/homemodels/model5.png"
+import model6 from "@/public/homemodels/model6.png"
+import model7 from "@/public/homemodels/model7.png"
+import model8 from "@/public/homemodels/model8.png"
 export const models = [{
     name: "model1",
-    URL: "https://theownly.s3-ca-central-1.amazonaws.com/models/97/8ccbfbc0-020c-47b3-b387-c202fe15254e.png",
+    URL: model1,
     bed: 3,
     bath: 2.5,
-    sqft: 2551
+    sqft: 2551,
+    price: "$857,540"
 },
 {
     name: "model2",
-    URL: "https://theownly.s3-ca-central-1.amazonaws.com/models/98/df8f0a6e-10e3-4ba5-9eb2-70c3b39f48bf.png",
+    URL: model2,
     bed: 3,
     bath: 2.5,
-    sqft: 1892
+    sqft: 1892,
+    price: "$741,630"
 },
 {
     name: "model3",
-    URL: "https://theownly.s3-ca-central-1.amazonaws.com/models/541/b610e067-fc85-48b3-b2a4-0822f8c2572e.png",
+    URL: model3,
     bed: 3,
     bath: 2.5,
-    sqft: 2149
+    sqft: 2149,
+    price: "$769,420"
 },
 {
     name: "model4",
-    URL: "https://theownly.s3-ca-central-1.amazonaws.com/models/549/2b221591-b637-43cc-a1e0-485f6a6b2c4f.png",
+    URL: model4,
     bed: 3,
     bath: 2.5,
-    sqft: 1990
+    sqft: 1990,
+    price: "$745,080"
 },
 {
     name: "model5",
-    URL: "https://theownly.s3-ca-central-1.amazonaws.com/models/550/31b3ceeb-9d70-4e56-ae1e-27dcb25f3526.png",
+    URL: model5,
     bed: 3,
     bath: 2.5,
-    sqft: 1777
+    sqft: 1777,
+    price: "$720,560"
 },
 {
     name: "model6",
-    URL: "https://theownly.s3-ca-central-1.amazonaws.com/models/551/e4239c0f-b613-4fbb-9c72-84d837a8ce1e.png",
+    URL: model6,
     bed: 3,
     bath: 2.5,
-    sqft: 1492
+    sqft: 1492,
+    price: "$864,760"
 },
 {
     name: "model7",
-    URL: "https://theownly.s3-ca-central-1.amazonaws.com/models/552/25d23236-b187-48c9-b4db-c835fc44a401.png",
+    URL: model7,
     bed: 3,
     bath: 2.5,
-    sqft: 2707
+    sqft: 2707,
+    price: "$820,670"
 },
 {
-    name: "model7",
-    URL: "https://theownly.s3-ca-central-1.amazonaws.com/models/822/13f67929-0148-47a3-8dca-a29234844ab9.png",
+    name: "model8",
+    URL: model8,
     bed: 3,
     bath: 2.5,
-    sqft: 2462
+    sqft: 2462,
+    price: "$857,540"
 }]
