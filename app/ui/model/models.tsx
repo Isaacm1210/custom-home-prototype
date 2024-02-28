@@ -1,19 +1,19 @@
 import { models } from "@/models/homeModels"
-import { Model } from "@/types/model"
+import { ModelDef } from "@/types/model"
 import Image from "next/image"
-import { modelSelect } from "@/app/lib/actions"
-import { useState } from "react"
-export default function Models() {
-
+export default function Models({callBack}:any) {
+    const handleSelection = (selection: ModelDef) => {
+        callBack(selection)
+    }
     return (
         <div className="w-full h-full grid grid-cols-2 gap-3">
             {models.map((model, index) => {
                 
                 return (
-                    <div key={model.name} >
-                        <div className="border border-gray-600 rounded-lg border-opacity-35 w-4/5 m-auto p-5">
+                    <div key={model.name}>
+                        <div className="border border-gray-600 rounded-lg border-opacity-35 w-4/5 m-auto p-5 hover:cursor-pointer" onClick={(e)=> handleSelection(model)}>
                             <div className="w-full h-80 relative overflow-hidden rounded-lg p-4" >
-                                <Image src={model.URL} alt={model.name} fill objectFit="cover" />
+                                <Image src={model.URL} alt={model.name} fill objectFit="cover" sizes="(max-width:600px) 90vw"/>
                             </div>
                             <h1 className="font-semibold text-2xl">Model {index + 1}</h1>
                             <div className="text-gray-950 text-opacity-70">

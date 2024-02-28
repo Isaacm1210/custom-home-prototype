@@ -1,6 +1,11 @@
-import { Model } from "@/types/model";
+import { ModelDef } from "@/types/model";
 import Models from "../ui/model/models";
-export let modelNum: number;
-export function modelSelect({model}: {model: Model}){
+import { Community } from "@/types/community";
+
+export function modelSelect({model}: {model: ModelDef}){
+    
+}
+
+export function communitySelect({com} : {com: Community}){
     
 }

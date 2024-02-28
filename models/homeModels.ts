@@ -6,8 +6,8 @@ import model5 from "@/public/homemodels/model5.png"
 import model6 from "@/public/homemodels/model6.png"
 import model7 from "@/public/homemodels/model7.png"
 import model8 from "@/public/homemodels/model8.png"
-import { Model } from "@/types/model";
-export const models: Model[] = [{
+import { ModelDef } from "@/types/model";
+export const models: ModelDef[] = [{
     name: "model1",
     URL: model1,
     bed: 3,

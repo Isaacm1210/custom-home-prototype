@@ -1,5 +1,5 @@
 import { StaticImageData } from "next/image";
-export type Model = {
+export type ModelDef = {
     name: string,
     URL: StaticImageData,
     bed: number,
