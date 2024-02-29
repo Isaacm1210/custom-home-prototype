@@ -12,8 +12,6 @@ export default function SelectedModal({modal}: {modal: ModelDef}) {
                 <p>Bath: {modal.bath}</p>
                 <p>sqft: {modal.sqft}</p>
             </div>
-            
         </div>
     )
-
 }
