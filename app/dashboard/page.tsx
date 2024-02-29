@@ -5,6 +5,7 @@ import Options from "./options/options"
 import Summary from "./summary/summary"
 import { useState } from "react"
 import { ModelDef } from "@/types/model";
+import { lot } from "@/types/community";
 import d from "@/public/homemodels/model1.png"
 import NavBar from "../ui/dashboard/navbar"
 const defaultModal: ModelDef = {
@@ -17,18 +18,30 @@ const defaultModal: ModelDef = {
 }
 
 export default function Page() {
-    const [community, setCommunity] = useState(0);
-    const [modal, setModal] = useState(defaultModal);
+    const [lot, setLot] = useState<lot>({
+        lotNum: 0,
+        price: 0,
+        status: "Available",
+        community: "",
+        frontage: 0,
+        maxSqFt: 0,
+        address: ""
+    });
+    const [modal, setModal] = useState<ModelDef>(defaultModal);
     const [page, setPage] = useState("Location");
 
     const changePage = (newPage: string) => {
-        setPage(newPage)
-    }
+        setPage(newPage);
+    };
 
-    const handleCommunity = (locationData: number) => {
-        setCommunity(locationData);
+    const handleLot = (lotNum: lot) => {
+        setLot(lotNum);
         setPage("Modal");
-    }
+    };
+    const handleCommunity = (locationData: number) => {
+        // setCommunity(locationData);
+        
+    };
 
     const handleModalSelect = (selectedModal: ModelDef) => {
         setModal(selectedModal);
@@ -38,10 +51,10 @@ export default function Page() {
 
     return (
         <div>
-            {page}
+            {lot?.lotNum}
             <NavBar page={page} change={changePage} />
-            {page === "Location" ? <Location callBack={handleCommunity} /> : ""}
-            {page === "Modal" ? <Model callBack={handleModalSelect} /> : ""}
+            {page === "Location" ? <Location callBack={handleLot} /> : ""}
+            {page === "Modal" ? <Model callBack={handleModalSelect} lot={lot}/> : ""}
             {page === "Options" ? <Options modal={modal}/> : ""}
             {page === "Summary" ? <Summary /> : ""}
         </div>

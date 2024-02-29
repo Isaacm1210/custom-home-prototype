@@ -1,9 +1,17 @@
+import SelectedLot from "@/app/ui/location/selectedLot"
 import Models from "@/app/ui/model/models"
-export default function Model({callBack}: any){
-    return(
+import { lot } from "@/types/community"
+export default function Model({ callBack, lot }: { callBack: Function, lot: lot }) {
+    return (
         <div className="w-full h-full pb-5">
-            <h2>Select Your Model</h2>
-            <Models callBack={callBack} />
+            <div className="bg-green-200 w-min m-auto p-5 rounded-lg">
+                <SelectedLot selectedLot={lot} />
+            </div>
+            
+            <div className="">
+                <h2 className="text-center w-62 text-3xl m-auto my-5 font-semibold">Select Your Model</h2>
+                <Models callBack={callBack} lot={lot} />
+            </div>
         </div>
     )
 }

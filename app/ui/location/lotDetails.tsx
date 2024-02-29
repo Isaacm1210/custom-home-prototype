@@ -1,17 +1,29 @@
-export default function LotDetails({lotNum}:{lotNum: number}){
+import { useEffect, useState } from "react"
+import { lots } from "@/models/lots"
+import { lot } from "@/types/community";
+import SelectedLot from "./selectedLot";
+export default function LotDetails({ lotNum = 0, handleLot }: { lotNum: number, handleLot: Function }) {
+    const [selectedLot, setSelectedLot] = useState<lot>()
+    useEffect(() => {
+        const temp = lots.filter((element) => element.lotNum == lotNum)
+        if (temp !== null)
+            setSelectedLot(temp[0]);
+    }, [lotNum])
 
-    if(lotNum === 0){
-        return(
+    if (selectedLot === undefined) {
+        return (
             <div>Please Select a lot</div>
         )
     }
-    return(
+    return (
         <div className="w-96 m-auto mt-6">
-            <h1 className="text-2xl font-semibold border border-gray-700 text-center ">Details</h1>
-            <p>lot #</p>
-            <p>Price</p>
-            <p>Status</p>
-            <p>Community</p>
+            <SelectedLot selectedLot={selectedLot} />
+            <input
+                type="button"
+                value={"Select This Lot"}
+                onClick={() => handleLot(selectedLot)}
+                className="hover:cursor-pointer w-1/2 bg-yellow-600"
+            />
         </div>
     )
 }

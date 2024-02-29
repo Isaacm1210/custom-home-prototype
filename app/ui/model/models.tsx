@@ -1,17 +1,20 @@
 import { models } from "@/models/homeModels"
 import { ModelDef } from "@/types/model"
+import { lot } from "@/types/community"
 import Image from "next/image"
-export default function Models({callBack}:any) {
+export default function Models({callBack, lot}: {callBack: Function, lot: lot}) {
     const handleSelection = (selection: ModelDef) => {
         callBack(selection)
     }
     return (
         <div className="w-full h-full grid grid-cols-2 gap-3">
             {models.map((model, index) => {
-                
+                if(model.sqft > lot.maxSqFt && lot.lotNum != 0){
+                    return null;
+                }
                 return (
                     <div key={model.name}>
-                        <div className="border border-gray-600 rounded-lg border-opacity-35 w-4/5 m-auto p-5 hover:cursor-pointer" onClick={(e)=> handleSelection(model)}>
+                        <div className="border border-gray-600 rounded-lg border-opacity-35 w-4/5 m-auto p-5 hover:cursor-pointer" onClick={()=> handleSelection(model)}>
                             <div className="w-full h-80 relative overflow-hidden rounded-lg p-4" >
                                 <Image src={model.URL} alt={model.name} fill objectFit="cover" sizes="(max-width:600px) 90vw"/>
                             </div>
