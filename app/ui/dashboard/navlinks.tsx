@@ -22,7 +22,7 @@ export default function Navlinks({ page, change}: {page: string, change: any}) {
                 return (
                     <div className={clsx("hover:cursor-pointer",{"text-blue-800" : page === link.name})} key={link.name} onClick={() => {change(link.name)}}>
                         <div className="w-7 h-7 m-auto border rounded border-gray-700 flex justify-center border-opacity-30" >
-                            <Image src={link.icon} alt="icon" width={22} height={22} color={clsx({ "green": link.name == page })} />
+                            <Image src={link.icon} alt="icon" width={22} height={22} />
                         </div>
                         <p>{link.name}</p>
                     </div>
