@@ -1,18 +1,17 @@
 'use client';
 
 import Image from "next/image";
-import Link from "next/link"
 import local from '@/public/icon/geo-alt-fill.svg'
 import house from '@/public/icon/house-door.svg'
 import pencil from '@/public/icon/pencil-square.svg'
 import check from '@/public/icon/check2-square.svg'
 import clsx from 'clsx';
-import { usePathname } from 'next/navigation';
+
 const links = [
-    { name: "Location", href: '/dashboard', icon: local },
-    { name: "Modal", href: '/dashboard/model', icon: house },
-    { name: "Options", href: '/dashboard/options', icon: pencil },
-    { name: "Summary", href: '/dashboard/summary', icon: check }
+    { name: "Location", icon: local },
+    { name: "Modal", icon: house },
+    { name: "Options", icon: pencil },
+    { name: "Summary", icon: check }
 ]
 
 export default function Navlinks({ page, change}: {page: string, change: any}) {

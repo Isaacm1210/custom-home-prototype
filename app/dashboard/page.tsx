@@ -43,7 +43,7 @@ export default function Page() {
             {page === "Location" ? <Location callBack={handleCommunity} /> : ""}
             {page === "Modal" ? <Model callBack={handleModalSelect} /> : ""}
             {page === "Options" ? <Options modal={modal}/> : ""}
-            {page === "summary" ? <Summary /> : ""}
+            {page === "Summary" ? <Summary /> : ""}
         </div>
     );
 };

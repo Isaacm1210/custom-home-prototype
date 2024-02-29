@@ -8,7 +8,7 @@ import model7 from "@/public/homemodels/model7.png"
 import model8 from "@/public/homemodels/model8.png"
 import { ModelDef } from "@/types/model";
 export const models: ModelDef[] = [{
-    name: "model1",
+    name: "Modal 1",
     URL: model1,
     bed: 3,
     bath: 2.5,
@@ -16,7 +16,7 @@ export const models: ModelDef[] = [{
     price: "$857,540"
 },
 {
-    name: "model2",
+    name: "Modal 2",
     URL: model2,
     bed: 3,
     bath: 2.5,
@@ -24,7 +24,7 @@ export const models: ModelDef[] = [{
     price: "$741,630"
 },
 {
-    name: "model3",
+    name: "Modal 3",
     URL: model3,
     bed: 3,
     bath: 2.5,
@@ -32,7 +32,7 @@ export const models: ModelDef[] = [{
     price: "$769,420"
 },
 {
-    name: "model4",
+    name: "Modal 4",
     URL: model4,
     bed: 3,
     bath: 2.5,
@@ -40,7 +40,7 @@ export const models: ModelDef[] = [{
     price: "$745,080"
 },
 {
-    name: "model5",
+    name: "Modal 5",
     URL: model5,
     bed: 3,
     bath: 2.5,
@@ -48,7 +48,7 @@ export const models: ModelDef[] = [{
     price: "$720,560"
 },
 {
-    name: "model6",
+    name: "Modal 6",
     URL: model6,
     bed: 3,
     bath: 2.5,
@@ -56,7 +56,7 @@ export const models: ModelDef[] = [{
     price: "$864,760"
 },
 {
-    name: "model7",
+    name: "Modal 7",
     URL: model7,
     bed: 3,
     bath: 2.5,
@@ -64,7 +64,7 @@ export const models: ModelDef[] = [{
     price: "$820,670"
 },
 {
-    name: "model8",
+    name: "Modal 8",
     URL: model8,
     bed: 3,
     bath: 2.5,
