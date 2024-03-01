@@ -8,6 +8,7 @@ import { ModelDef } from "@/types/model";
 import { lot } from "@/types/community";
 import d from "@/public/homemodels/model1.png"
 import NavBar from "../ui/dashboard/navbar"
+import { options } from "@/types/options";
 const defaultModal: ModelDef = {
     name: "",
     URL: d,
@@ -22,14 +23,14 @@ export default function Page() {
         lotNum: 0,
         price: 0,
         status: "Available",
-        community: "",
+        community: "N/A",
         frontage: 0,
         maxSqFt: 0,
-        address: ""
+        address: "N/A"
     });
     const [modal, setModal] = useState<ModelDef>(defaultModal);
     const [page, setPage] = useState("Location");
-
+    const [ options, setOptions ] = useState<options>({garage: 2, driveway: 2})
     const changePage = (newPage: string) => {
         setPage(newPage);
     };
@@ -48,15 +49,19 @@ export default function Page() {
         setPage("Options");
     };
 
+    const handleOptionSave = (garage: number, driveway: number) => {
+        setOptions({garage, driveway});
+        setPage("Summary");
+    }
+
 
     return (
         <div>
-            {lot?.lotNum}
             <NavBar page={page} change={changePage} />
             {page === "Location" ? <Location callBack={handleLot} /> : ""}
             {page === "Modal" ? <Model callBack={handleModalSelect} lot={lot}/> : ""}
-            {page === "Options" ? <Options modal={modal}/> : ""}
-            {page === "Summary" ? <Summary /> : ""}
+            {page === "Options" ? <Options modal={modal} lot={lot} handleSave={handleOptionSave}/> : ""}
+            {page === "Summary" ? <Summary lot={lot} modal={modal} options={options} /> : ""}
         </div>
     );
 };

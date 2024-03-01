@@ -12,7 +12,7 @@ export default function LotDetails({ lotNum = 0, handleLot }: { lotNum: number, 
 
     if (selectedLot === undefined) {
         return (
-            <div>Please Select a lot</div>
+            <div>Please Select a Lot to View Details</div>
         )
     }
     return (

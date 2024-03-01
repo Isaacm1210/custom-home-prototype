@@ -1,10 +1,23 @@
 import { ModelDef } from "@/types/model"
-import SelectedModal from "@/app/ui/options/selectedModal"
 import ModalDisplay from "@/app/ui/model/modalDisplay"
-export default function Options({modal} : {modal: ModelDef}){
-    return(
-        <div className="w-2/4 m-auto">
-            <ModalDisplay modal={modal} />
+import InteriorOptions from "@/app/ui/options/interiorOptions"
+import ExteriorOptions from "@/app/ui/options/exteriorOptions"
+import { lot } from "@/types/community"
+import { useState } from "react"
+import Save from "@/app/ui/options/save"
+
+export default function Options({ modal, lot, handleSave }: { modal: ModelDef, lot: lot, handleSave: Function }) {
+    const [ garage, setGarage ] = useState(2)
+    const [driveway, setDriveway ] = useState(2)
+
+    return (
+        <div className="mb-40">
+            <div className="w-2/4 m-auto">
+                <ModalDisplay modal={modal} />
+            </div>
+            <InteriorOptions />
+            <ExteriorOptions lot={lot} setGarage={setGarage} setDriveway={setDriveway} />
+            <Save modal={modal} garage={garage} driveway={driveway} handleSave={handleSave}/>
         </div>
     )
 }

@@ -16,6 +16,9 @@ const config: Config = {
       spacing: {
         "18": "72px",
         "70": "270px"
+      },
+      boxShadow:{
+        "1": "0px 0px 24px 6px rgba(0,0,0,0.3)"
       }
     },
   },

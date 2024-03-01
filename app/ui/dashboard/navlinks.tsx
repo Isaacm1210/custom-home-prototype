@@ -14,7 +14,7 @@ const links = [
     { name: "Summary", icon: check }
 ]
 
-export default function Navlinks({ page, change}: {page: string, change: any}) {
+export default function Navlinks({ page, change}: {page: string, change: Function}) {
     
     return (
         <div className="flex justify-evenly">
