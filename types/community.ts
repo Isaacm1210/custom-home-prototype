@@ -4,11 +4,11 @@ export type Community = {
 }
 
 export type lot = {
-    lotNum: number,
-    price: number,
-    status: "Available" | "Un-Available",
-    community: string,
-    frontage: number,
-    maxSqFt: number,
-    address: string
+    lotNum: number | "N/A",
+    price: number  | "N/A",
+    status: "Available" | "Un-Available" | "N/A",
+    community: string | "N/A",
+    frontage: number | "N/A",
+    maxSqFt: number | "N/A",
+    address: string | "N/A"
 }

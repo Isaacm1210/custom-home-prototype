@@ -13,7 +13,7 @@ export const models: ModelDef[] = [{
     bed: 3,
     bath: 2.5,
     sqft: 2551,
-    price: "$857,540"
+    price: 857540.00
 },
 {
     name: "Modal 2",
@@ -21,7 +21,7 @@ export const models: ModelDef[] = [{
     bed: 3,
     bath: 2.5,
     sqft: 1892,
-    price: "$741,630"
+    price: 741630.00
 },
 {
     name: "Modal 3",
@@ -29,7 +29,7 @@ export const models: ModelDef[] = [{
     bed: 3,
     bath: 2.5,
     sqft: 2149,
-    price: "$769,420"
+    price: 769420.00
 },
 {
     name: "Modal 4",
@@ -37,7 +37,7 @@ export const models: ModelDef[] = [{
     bed: 3,
     bath: 2.5,
     sqft: 1990,
-    price: "$745,080"
+    price: 745080.00
 },
 {
     name: "Modal 5",
@@ -45,7 +45,7 @@ export const models: ModelDef[] = [{
     bed: 3,
     bath: 2.5,
     sqft: 1777,
-    price: "$720,560"
+    price: 720560.00
 },
 {
     name: "Modal 6",
@@ -53,7 +53,7 @@ export const models: ModelDef[] = [{
     bed: 3,
     bath: 2.5,
     sqft: 1492,
-    price: "$864,760"
+    price: 864760.00
 },
 {
     name: "Modal 7",
@@ -61,7 +61,7 @@ export const models: ModelDef[] = [{
     bed: 3,
     bath: 2.5,
     sqft: 2707,
-    price: "$820,670"
+    price: 820670.00
 },
 {
     name: "Modal 8",
@@ -69,5 +69,5 @@ export const models: ModelDef[] = [{
     bed: 3,
     bath: 2.5,
     sqft: 2462,
-    price: "$857,540"
+    price: 857540.00
 }]

@@ -8,15 +8,14 @@ export default function ExteriorOptions({lot, setGarage, setDriveway}: {lot: lot
     const [smallLot, setSmallLot ] = useState(false);
     
     const checkLot = () => {
-        if(lot.frontage < 29){
+        if((lot.frontage as number) < 29){
             setSmallLot(true);
-           let standard = document.getElementById("standard");
+           let standard = document.getElementById("standard") as HTMLInputElement;
            if(standard)
             standard.checked = true;
         }else{
              setGarage(3);
         }
-       
     }
 
 

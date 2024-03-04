@@ -5,7 +5,7 @@ export type ModelDef = {
     bed: number,
     bath: number,
     sqft: number,
-    price: string
+    price: number
 }
 
 export type Models = [{

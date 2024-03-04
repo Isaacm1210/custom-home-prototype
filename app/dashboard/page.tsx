@@ -9,23 +9,24 @@ import { lot } from "@/types/community";
 import d from "@/public/homemodels/model1.png"
 import NavBar from "../ui/dashboard/navbar"
 import { options } from "@/types/options";
+import { garageTypes, drivewayTypes } from "@/models/options";
 const defaultModal: ModelDef = {
     name: "",
     URL: d,
     bed: 1,
     bath: 1,
     sqft: 1,
-    price: ""
+    price: 0
 }
 
 export default function Page() {
     const [lot, setLot] = useState<lot>({
-        lotNum: 0,
-        price: 0,
-        status: "Available",
+        lotNum: "N/A",
+        price: "N/A",
+        status: "N/A",
         community: "N/A",
-        frontage: 0,
-        maxSqFt: 0,
+        frontage: "N/A",
+        maxSqFt: "N/A",
         address: "N/A"
     });
     const [modal, setModal] = useState<ModelDef>(defaultModal);
@@ -38,10 +39,6 @@ export default function Page() {
     const handleLot = (lotNum: lot) => {
         setLot(lotNum);
         setPage("Modal");
-    };
-    const handleCommunity = (locationData: number) => {
-        // setCommunity(locationData);
-        
     };
 
     const handleModalSelect = (selectedModal: ModelDef) => {
@@ -56,7 +53,7 @@ export default function Page() {
 
 
     return (
-        <div>
+        <div className="min-w-[720px]">
             <NavBar page={page} change={changePage} />
             {page === "Location" ? <Location callBack={handleLot} /> : ""}
             {page === "Modal" ? <Model callBack={handleModalSelect} lot={lot}/> : ""}

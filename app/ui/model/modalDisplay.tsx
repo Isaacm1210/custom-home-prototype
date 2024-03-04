@@ -8,7 +8,7 @@ export default function ModalDisplay({ modal}: { modal: ModelDef}) {
             </div>
             <h1 className="font-semibold text-2xl">{modal.name}</h1>
             <div className="text-gray-950 text-opacity-70">
-                <h2 className="text-xl font-medium text-gray-950 text-opacity-70">From {modal.price}</h2>
+                <h2 className="text-xl font-medium text-gray-950 text-opacity-70">From {"$" + modal.price.toString().slice(0,3) + "," + modal.price.toString().slice(3,6)}</h2>
                 <div className="w-2/3 flex justify-start font-semibold mt-2 gap-9">
                     <div className="w-11 h-5 flex justify-evenly">
                         <span>{modal.bed}</span>
