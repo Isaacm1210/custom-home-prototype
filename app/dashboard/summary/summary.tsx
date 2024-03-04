@@ -49,8 +49,8 @@ export default function Summary({ lot, modal, options }: { lot: lot, modal: Mode
                     <div>
                         <h3 className="text-xl font-medium">Options</h3>
                         <div className="ml-2">
-                            <p className="w-2/3 flex justify-between"><span className="w-1/2">Garage: </span> <span className="w-1/2 text-left">{garage?.name} {garage?.cost === 0 ?"":"+$" + garage?.cost}</span></p>
-                            <p className="w-2/3 flex justify-between"><span className="w-1/2">Drivew-Way: </span><span className="w-1/2 text-left">{driveway?.name} {driveway?.cost === 0 ?"":"+$" + driveway?.cost}</span></p>
+                            <p className="w-2/3 flex justify-between"><span className="w-1/2">Garage: </span> <span className="w-1/2 text-left">{garage?.name} {garage?.cost === 0 ? "" : garage?.cost > 0 ? "+$" + garage.cost : "$" + garage.cost}</span></p>
+                            <p className="w-2/3 flex justify-between"><span className="w-1/2">Drivew-Way: </span><span className="w-1/2 text-left">{driveway?.name} {driveway?.cost === 0 ? "" : "+$" + driveway?.cost}</span></p>
                             <p className="w-2/3 flex justify-between"><span className="w-1/2">...</span> </p>
                             <p className="w-2/3 flex justify-between"><span className="w-1/2">...</span> </p>
                             <p className="w-2/3 flex justify-between"><span className="w-1/2">...</span> </p>
