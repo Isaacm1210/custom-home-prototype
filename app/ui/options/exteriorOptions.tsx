@@ -8,7 +8,7 @@ export default function ExteriorOptions({lot, setGarage, setDriveway}: {lot: lot
     const [smallLot, setSmallLot ] = useState(false);
     
     const checkLot = () => {
-        if((lot.frontage as number) < 29){
+        if((lot.frontage as number) < 39.5){
             setSmallLot(true);
            let standard = document.getElementById("standard") as HTMLInputElement;
            if(standard)

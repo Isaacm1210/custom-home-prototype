@@ -12,18 +12,22 @@ export default function LotDetails({ lotNum = 0, handleLot }: { lotNum: number, 
 
     if (selectedLot === undefined) {
         return (
-            <div>Please Select a Lot to View Details</div>
+            <div className="w-max mx-auto my-6 text-xl font-medium">Please Select a Lot to View Details</div>
         )
     }
     return (
-        <div className="w-96 m-auto mt-6">
-            <SelectedLot selectedLot={selectedLot} />
-            <input
-                type="button"
-                value={"Select This Lot"}
-                onClick={() => handleLot(selectedLot)}
-                className="hover:cursor-pointer w-1/2 bg-yellow-600"
-            />
+        <div className=" m-auto mt-3">
+            <div className="bg-green-200 w-min m-auto p-5 rounded-lg">
+                <SelectedLot selectedLot={selectedLot} />
+            </div>
+            <div className="w-36 m-auto mt-2">
+                <input
+                    type="button"
+                    value={"Select This Lot"}
+                    onClick={() => handleLot(selectedLot)}
+                    className="hover:cursor-pointer w-full bg-yellow-600 rounded-lg text-lg hover:bg-opacity-75" 
+                />
+            </div>
         </div>
     )
 }
