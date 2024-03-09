@@ -9,7 +9,7 @@ import { lot } from "@/types/community";
 import d from "@/public/homemodels/model1.png"
 import NavBar from "../ui/dashboard/navbar"
 import { options } from "@/types/options";
-import { garageTypes, drivewayTypes } from "@/models/options";
+
 const defaultModal: ModelDef = {
     name: "",
     URL: d,
