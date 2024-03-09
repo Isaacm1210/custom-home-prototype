@@ -33,7 +33,8 @@ export default function Page() {
     const [page, setPage] = useState("Location");
     const [ options, setOptions ] = useState<options>({garage: 2, driveway: 2})
     const changePage = (newPage: string) => {
-        setPage(newPage);
+            setPage(newPage);
+
     };
 
     const handleLot = (lotNum: lot) => {

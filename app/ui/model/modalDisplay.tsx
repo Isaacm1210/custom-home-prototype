@@ -2,7 +2,8 @@ import { ModelDef } from "@/types/model"
 import Image from "next/image"
 export default function ModalDisplay({ modal}: { modal: ModelDef}) {
     return (
-        <div className="border border-gray-600 rounded-lg border-opacity-35 w-full m-auto p-5 hover:cursor-pointer">
+        <div className="border border-gray-600 rounded-lg border-opacity-15 w-full m-auto relative p-5">
+            <div >
             <div className="w-full h-96 relative overflow-hidden rounded-lg p-4" >
                 <Image src={modal.URL} alt={modal.name} fill objectFit="cover" sizes="(max-width:600px) 90vw" />
             </div>
@@ -30,6 +31,7 @@ export default function ModalDisplay({ modal}: { modal: ModelDef}) {
                         {modal.sqft + " sqft"}
                     </div>
                 </div>
+            </div>
             </div>
         </div>
     )

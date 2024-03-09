@@ -55,16 +55,16 @@ export default function ExteriorOptions({lot, setGarage, setDriveway}: {lot: lot
                                 <label htmlFor="stone">Brick (+$5,000)</label>
                             </div>
                             <div className="w-28 h-28 rounded-2xl overflow-hidden relative">
-                                <Image src={brick} alt="Brick Sample" fill objectFit="cover"/>
+                            <label htmlFor="stone"><Image src={brick} alt="Brick Sample" fill objectFit="cover"/></label> 
                             </div>
                         </div>
-                        <div className="flex flex-col my-3">
+                        <div className="flex flex-col my-3" >
                             <div className="flex items-center">
                                 <input type="radio" id="concrete" name="driveway" value={2} className="w-4 h-4 accent-zinc-950" defaultChecked onClick={() => setDriveway(2)}/>
                                 <label htmlFor="concrete">Concreate (Standard)</label>
                             </div>
                             <div className="w-28 h-28 relative rounded-2xl overflow-hidden">
-                                <Image src={concrete} alt="concrete sample" fill objectFit="cover"/>
+                            <label htmlFor="concrete"><Image src={concrete} alt="concrete sample" fill objectFit="cover"/></label>
                             </div>
                         </div>
                         <div className="flex flex-col my-3">
@@ -73,7 +73,7 @@ export default function ExteriorOptions({lot, setGarage, setDriveway}: {lot: lot
                                 <label htmlFor="rock">Asphalt (+$4,500)</label>
                             </div>
                             <div className="w-28 h-28 relative rounded-2xl overflow-hidden">
-                                <Image src={asphalt} alt="asphalt sample" fill objectFit="cover"/>
+                            <label htmlFor="rock"><Image src={asphalt} alt="asphalt sample" fill objectFit="cover"/></label>
                             </div>
                         </div>
                     </div>
