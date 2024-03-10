@@ -10,7 +10,7 @@ export default function ModalDisplay({ modal}: { modal: ModelDef}) {
             <h1 className="font-semibold text-2xl">{modal.name}</h1>
             <div className="text-gray-950 text-opacity-70">
                 <h2 className="text-xl font-medium text-gray-950 text-opacity-70">From {"$" + modal.price.toString().slice(0,3) + "," + modal.price.toString().slice(3,6)}</h2>
-                <div className="w-2/3 flex justify-start font-semibold mt-2 gap-9">
+                <div className="w-full flex justify-start font-semibold mt-2 gap-9">
                     <div className="w-11 h-5 flex justify-evenly">
                         <span>{modal.bed}</span>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" fill="currentColor">
@@ -27,7 +27,7 @@ export default function ModalDisplay({ modal}: { modal: ModelDef}) {
                             </svg>
                         </div>
                     </div>
-                    <div className="w-1/3 h-5">
+                    <div className="w-max h-5">
                         {modal.sqft + " sqft"}
                     </div>
                 </div>

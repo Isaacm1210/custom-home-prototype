@@ -9,7 +9,7 @@ export default function Models({ callBack, lot }: { callBack: Function, lot: lot
     }
     return (
         <div className="mx-20">
-            <div className="m-auto w-4/5 h-full grid grid-cols-3 gap-10 ">
+            <div className="m-auto w-7/8 h-full grid grid-cols-3 gap-10 ">
                 {models.map((model) => {
                     if (model.sqft > (lot.maxSqFt as number) && lot.lotNum != 0) {
                         return null;
