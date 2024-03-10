@@ -12,10 +12,13 @@ export default function Options({ modal, lot, handleSave }: { modal: ModelDef, l
 
     return (
         <div className="mb-40">
+            <h1 className="w-72 mx-auto my-5 text-3xl text-center font-semibold">
+                Build Options
+            </h1>
             <div className="w-2/4 m-auto">
                 <ModalDisplay modal={modal} />
             </div>
-            <InteriorOptions />
+            {/* <InteriorOptions /> */}
             <ExteriorOptions lot={lot} setGarage={setGarage} setDriveway={setDriveway} />
             <Save modal={modal} garage={garage} driveway={driveway} handleSave={handleSave}/>
         </div>
